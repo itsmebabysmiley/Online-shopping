@@ -53,10 +53,9 @@
                     <p class="card-text">
                         <h3>Search</h3>
                     </p>
-                    <form action="" method="post">
                         <div class="input-group">
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="search here">
-                            <button type="button" class="btn btn-outline-secondary" onclick="location.href = 'result.html';">
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="search here" id="searchbox">
+                            <button type="button" class="btn btn-outline-secondary" onclick="submit()">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 6">
                                     <path
                                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -67,33 +66,47 @@
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <div class="container">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                        <input class="form-check-input" type="checkbox" id="Checkbox1" >
+                                        <label class="form-check-label" for="Checkbox1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                                        <input class="form-check-input" type="checkbox" id="Checkbox2" >
+                                        <label class="form-check-label" for="Checkbox2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3">
-                                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                                        <input class="form-check-input" type="checkbox" id="Checkbox3" >
+                                        <label class="form-check-label" for="Checkbox3">3</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="option4" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">checkbox4</label>
+                                        <input class="form-check-input" type="checkbox"  id="Checkbox4">
+                                        <label class="form-check-label" for="Checkbox4">checkbox4</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="option5" id="flexCheckChecked">
-                                        <label class="form-check-label" for="flexCheckChecked">checkbox5</label>
+                                        <input class="form-check-input" type="checkbox"  id="Checkbox5">
+                                        <label class="form-check-label" for="Checkbox5">checkbox5</label>
                                     </div>
                                 </div>
                             </ul>
                         </div>
-                    </form>
                 </div>
             </div>
         
     </div>
+
+    <script>
+        function submit(){
+            var data = [6];
+            data[0] = document.getElementById("searchbox").value;
+            var send = "?search=" + data[0];
+            for(var i = 1; i <=5; i++){
+                var string = "Checkbox"+i;
+                var checkbox = document.getElementById(string).checked;
+                send+="box"+i+"="+checkbox;
+            }
+            console.log(send);
+            window.location.href = "result.html" + send;
+        }
+    </script>
 </body>
 
 </html>
