@@ -91,7 +91,7 @@
                 <a class="nav-link" aria-current="page" href="#">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Search</a>
+                <a class="nav-link" href="search.html">Search</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -99,13 +99,13 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
-                          <a class="dropdown-item" href="#">Cassette tape</a>
+                          <a class="dropdown-item" onclick="product('1')">Cassette tape</a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">Vinyl</a>
+                          <a class="dropdown-item" onclick="product('2')">Vinyl</a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">Films</a>
+                          <a class="dropdown-item" onclick="product('3')">Films</a>
                         </li>
                     </ul>
               </li>
@@ -116,14 +116,12 @@
                 <ul class="dropdown-menu"
                         aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item"
-                                href="#">Login</a></li>
+                                href="login.html">Login</a></li>
                         <li><a class="dropdown-item"
-                                href="#">Sign up</a></li>
+                                href="register.html">Sign up</a></li>
                         <li>
                             <hr class="dropdown-divider" />
                         </li>
-                        <li><a class="dropdown-item"
-                                href="#">Account</a></li>
                         <li><a class="dropdown-item"
                                 href="#">Sign out of XXX
                             </a></li>
@@ -143,7 +141,7 @@
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner" style="margin-top: 4.6rem;">
+        <div class="carousel-inner" style="margin-top: 60px">
           <div class="carousel-item active" data-bs-interval="10000">
             <img src="image/Banner1.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
@@ -220,6 +218,16 @@
           </div>
         </div>
     </footer>
-  
+    <!-- Javascript -->
+    <script> 
+        function product(x){
+
+          switch(x){
+            case '1' : window.location.href = "result.html"+"?search=Cassette tape"; break; 
+            case '2' : window.location.href = "result.html"+"?search=Vinyl"; break; 
+            case '3' : window.location.href = "result.html"+"?search=Films"; break; 
+          }
+        }
+    </script>
   </body>
 </html>

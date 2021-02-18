@@ -101,11 +101,11 @@
                 <ul class="dropdown-menu"
                         aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item"
-                                href="#">Cassette tape</a></li>
+                                onclick="product('1');">Cassette tape</a></li>
                         <li><a class="dropdown-item"
-                                href="#">Vinyl</a></li>
+                                onclick="product('2');">Vinyl</a></li>
                         <li><a class="dropdown-item"
-                                href="#">Films</a></li>
+                                onclick="product('3');">Films</a></li>
                     </ul>
               </li>
               <li class="nav-item dropdown">
@@ -121,8 +121,6 @@
                         <li>
                             <hr class="dropdown-divider" />
                         </li>
-                        <li><a class="dropdown-item"
-                                href="#">Account</a></li>
                         <li><a class="dropdown-item"
                                 href="#">Sign out of XXX
                             </a></li>
@@ -322,6 +320,17 @@
         var query = decodeURIComponent(window.location.search);
         var data = query.substring(8);
         document.getElementById("searchbox").value = data;
+        
+        
+        function product(x){
+
+          switch(x){
+            case '1' : window.location.href = "result.html"+"?search=Cassette tape"; break; 
+            case '2' : window.location.href = "result.html"+"?search=Vinyl"; break; 
+            case '3' : window.location.href = "result.html"+"?search=Films"; break; 
+          }
+        }
+    </script>
     </script>
 </body>
 
