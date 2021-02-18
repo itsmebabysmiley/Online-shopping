@@ -129,7 +129,7 @@
             </ul>
             <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto" >
                     <input id="searchbox" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="height: 3rem; margin-top:3%">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    <button class="btn btn-outline-light" type="submit" onclick="search()">Search</button>
             </ul>
             <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Toggle Dropdown</span>
@@ -170,7 +170,7 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm">
-                <img src="image/Vinyl1.png">
+                <img src="image\products\Vinyl.png">
                 <h4 style="margin: 15px">Hikari</h4>
                 <div class="card-body">
                   <p class="card-text">The first albums</p>
@@ -191,7 +191,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img src="image/Vinyl2.png">
+                <img src="image\products\Vinyl2.png">
                 <h4 style="margin: 15px">おはよう</h4>
                 <div class="card-body">
                   <p class="card-text">good morning Tokyo</p>
@@ -212,7 +212,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img src="image/Vinyl3.png">
+                <img src="image\products\Vinyl3.png">
                 <h4 style="margin: 15px">When You Say Nothing At All</h4>
                 <div class="card-body">
                   <p class="card-text">。。。</p>
@@ -321,6 +321,11 @@
         var data = query.substring(8);
         document.getElementById("searchbox").value = data;
         
+        function search(){
+          var key = document.getElementById("searchbox").value;
+          console.log(key);
+          window.location.href ="result.html"+"?search="+key
+        }
         
         function product(x){
 
