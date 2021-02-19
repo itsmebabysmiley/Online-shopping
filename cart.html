@@ -109,8 +109,8 @@
                   flex-direction: column;
               }
           }
-          th{
-            background-color:#314e52;
+          .table-dark{
+            --bs-table-bg:#314e52;
           }
       </style>
       <script>
@@ -154,10 +154,10 @@
         <table class="table table-striped mt-3">
             <thead class="table-dark">
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
+                <th id="headtable" scope="col">#</th>
+                <th id="headtable" scope="col">Name</th>
+                <th id="headtable" scope="col">Price</th>
+                <th id="headtable" scope="col">Quantity</th>
               </tr>
             </thead>
             <tbody>
@@ -182,7 +182,7 @@
             </tbody>
           </table>
         <div class="d-grid gap-2 mt-5">
-            <button type="button" class="btn btn-primary" onclick="location.href='payment.html';">Buy no cancel</button>
+            <button type="button" class="btn btn-secondary" onclick="location.href='payment.html';">Buy no cancel</button>
         </div>
     </div>
 </body>
