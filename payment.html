@@ -10,9 +10,24 @@
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-        <style>
-            .carousel-dark .carousel-caption{
-                color: white;
+      <style>
+          *{
+              font-family: sans-serif;
+          }
+  
+          body {
+              background-color: #f7f6e7;
+          }
+          a{
+              color: black;
+              text-decoration: none;
+          }
+          .btn, .myBtn{
+              color:#ffffff;
+              border-radius:20px;
+              background-color:#f2a154;
+              margin: 15px 15px 15px 0px;
+              border: 0px;
             }
               
             *{
@@ -190,14 +205,40 @@
           </table>
         <div class="container ms-auto ">
             <div class="text-muted fw-bolder">
-                Total: 1500<br>
-                Vat  : 300% (4500) <br>
-                Total: 6000
+                Total: <span id="total"></span><br>
+                Vat  : <span id="vat"></span><br>
+                Total: <span id="totalvat"></span>
             </div>
         </div>
         <div class="d-grid gap-2 mt-3">
             <button type="button" class="btn btn-primary align-center" onclick="location.href='payment.html';"><h5>Confirm</h3></button>
         </div>
     </div>
+
+     <!-- FOOTER -->
+     <footer id="footer">
+      
+      <div class="large-6 medium-6 columns">
+        <div class="container">
+          <p><strong>Group 3</strong></p>
+          <a href="#carouselExampleDark" class="btn btn-primary"style="background-color:#314e52;" > top</a>
+          <p><span>Copyright © 2021 Group3.co.</span> <span>All Rights Reserved.</span></p>
+        </div>
+      </div>
+  </footer>
+  <!-- FOOTER ENDED -->   
+  
+  
+  <!-- javascript -->
+  <script>
+    var p1 = document.getElementById("price1").innerText;
+    var p2 = document.getElementById("price2").innerText;
+    var p3 = document.getElementById("price3").innerText;
+    var total = parseFloat(p1) + parseFloat(p2) + parseFloat(p3);
+    document.getElementById("total").innerText = total;
+    var vat = total * 3;
+    document.getElementById("vat").innerText = "300% (" + vat +")";
+    document.getElementById("totalvat").innerText = total + vat;
+  </script>
 </body>
 </html>
