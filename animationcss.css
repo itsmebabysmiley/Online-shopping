@@ -11,7 +11,10 @@ background-color: #f2a154;
 content: "";
 transition: width 0.2s;
 }
-
+.underlineHover{
+    text-decoration: none;
+    color: #000000;
+}
 .underlineHover:hover {
 color: #f2a154;
 }
@@ -25,11 +28,11 @@ border-color: rgb(242, 161, 84);
 outline: 0;
 box-shadow: 0 0 0 0.25rem rgb(242 161 84 / 25%);
 }
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus {
 background-color: #f6f6f6;
 border-bottom: 2px solid #f2a154;
 }
-input[type=text],input[type=password] {
+input[type=text],input[type=password], input[type=email], textarea {
 background-color: #f6f6f6;
 text-align: left;
 padding: 10px 20px;
@@ -42,12 +45,6 @@ transition: all 0.5s ease-in-out;
 -webkit-border-radius: 5px 5px 5px 5px;
 border-radius: 5px 5px 5px 5px;
 }
-.fadeIn.second {
--webkit-animation-delay: 0.6s;
--moz-animation-delay: 0.6s;
-animation-delay: 0.6s;
-}
-
 .fadeInDown {
 -webkit-animation-name: fadeInDown;
 animation-name: fadeInDown;
@@ -56,15 +53,6 @@ animation-duration: 1s;
 -webkit-animation-fill-mode: both;
 animation-fill-mode: both;
 }
-.fadeInDown {
--webkit-animation-name: fadeInDown;
-animation-name: fadeInDown;
--webkit-animation-duration: 1s;
-animation-duration: 1s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
-}
-
 @-webkit-keyframes fadeInDown {
 0% {
     opacity: 0;
@@ -134,4 +122,16 @@ animation-delay: 0.8s;
 -moz-animation-delay: 1s;
 animation-delay: 1s;
 }
+
+.fadeIn.fifth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.fadeIn.sex {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+    
 /**/
