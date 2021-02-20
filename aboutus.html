@@ -64,10 +64,21 @@
             background-color: #f2a154;
         }
          /* Navbar css ended*/
-        .card{
-            background-color: #f7f6e7;
+        .card img, .card{
             border: none;
+            width: 12rem;
+            margin: auto;
+            background-color: #f7f6e7;
         }
+        @media screen and (max-width: 1024px) {
+            .card img{
+              width: 10rem;
+              margin: auto;
+            }
+
+        }
+        
+
     </style>
 </head>
 <body>
@@ -231,19 +242,19 @@
               <h1 class="pb-4 mb-4 border-bottom" id="awards"><strong>Awards</strong></h1>
               <article class="blog-post">
                   <div class="card-group">
-                      <div class="card" style="width: 18rem; margin-right:10%">
+                      <div class="card">
                           <img src="https://www.flaticon.com/svg/vstatic/svg/3112/3112946.svg?token=exp=1613717814~hmac=3c2f0aeafd85cde68c7a7e5d13aa8b44" class="card-img-top" alt="...">
                           <div class="card-body">
                           <p class="card-text">We won awards in 2019</p>
                           </div>
                       </div>
-                      <div class="card" style="width: 18rem; margin-right:10%">
+                      <div class="card">
                           <img src="https://www.flaticon.com/svg/vstatic/svg/3176/3176367.svg?token=exp=1613717878~hmac=63f233a7c8703327ab5e57dc65dd2fef" class="card-img-top" alt="...">
                           <div class="card-body">
                           <p class="card-text">We won awards in 2020</p>
                           </div>
                       </div>
-                      <div class="card" style="width: 18rem; margin-right:10%">
+                      <div class="card">
                           <img src="https://www.flaticon.com/svg/vstatic/svg/3112/3112946.svg?token=exp=1613717814~hmac=3c2f0aeafd85cde68c7a7e5d13aa8b44" class="card-img-top" alt="...">
                           <div class="card-body">
                           <p class="card-text">We won awards in 2021</p>
