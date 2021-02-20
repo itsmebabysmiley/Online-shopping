@@ -43,6 +43,7 @@
                 border-radius: 30px ;
               }
             /* footer ended*/
+
             /* Navbar css start*/
             #brandlogo{
                 font-family: Cooper;
@@ -171,33 +172,46 @@
               <tr>
                 <th scope="row">1</th>
                 <td>Vinyl</td>
-                <td>1000.00</td>
+                <td id="price1">1000.00</td>
                 <td>10</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>Fuji Films</td>
-                <td>300.00</td>
-                <td>100</td
+                <td id="price2">300.00</td>
+                <td>100</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td>Kodak Films</td>
-                <td>250.00</td>
-                <td>2</td
+                <td id="price3">250.00</td>
+                <td>2</td>
+
               </tr>
             </tbody>
           </table>
         <div class="container ms-auto ">
             <div class="text-muted fw-bolder">
-                Total: 1500<br>
-                Vat  : 300% (4500) <br>
-                Total: 6000
+                Total: <span id="total"></span><br>
+                Vat  : <span id="vat"></span><br>
+                Total: <span id="totalvat"></span>
             </div>
         </div>
-        <div class="d-grid gap-2 mt-5">
-          <a type="button" class="btn btn-secondary" onclick="location.href='payment.html';" href="home.html">Confirm</a>
-      </div>
+
+        <div class="d-grid gap-2 mt-3">
+            <button type="button" class="btn btn-secondary align-center" onclick="location.href='payment.html';"><h5>Confirm</h3></button>
+        </div>
     </div>
+      <!-- javascript -->
+    <script>
+      var p1 = document.getElementById("price1").innerText;
+      var p2 = document.getElementById("price2").innerText;
+      var p3 = document.getElementById("price3").innerText;
+      var total = parseFloat(p1) + parseFloat(p2) + parseFloat(p3);
+      document.getElementById("total").innerText = total;
+      var vat = total * 3;
+      document.getElementById("vat").innerText = "300% (" + vat +")";
+      document.getElementById("totalvat").innerText = total + vat;
+    </script>
 </body>
 </html>
