@@ -30,7 +30,9 @@
         footer {
             padding: 10px 30px;
             background-color:#f2a154;
-            position:absolute;
+            position: fixed;
+            left: 0 ;
+            bottom: 0;
             width: 100%;
 
           }
@@ -123,6 +125,7 @@
         </style>
 </head>
 <body>
+    <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a class="navbar-brand" href="home.html"> <h1 id="brandlogo">90's Taste</h1> </a>
@@ -152,6 +155,7 @@
           </div>
         </div>
     </nav>
+    <!-- END NAV BAR -->
     <div class="container mt-4 mb-5">
         <div class="text-center"><h1>Receipt</h1></div>
         <table class="table table-striped mt-3">
@@ -167,20 +171,20 @@
               <tr>
                 <th scope="row">1</th>
                 <td>Vinyl</td>
-                <td id="price1">1000.00</td>
-                <td>10</td>
+                <td id="price1">300.00</td>
+                <td>1</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Fuji Films</td>
-                <td id="price2">300.00</td>
-                <td>100</td>
+                <td>FUJICOLOR</td>
+                <td id="price2">220.00</td>
+                <td>1</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>Kodak Films</td>
-                <td id="price3">250.00</td>
-                <td>2</td>
+                <td>Cassette Tape (Season Change)</td>
+                <td id="price3">300.00</td>
+                <td>1</td>
               </tr>
             </tbody>
           </table>
@@ -192,19 +196,20 @@
             </div>
         </div>
         <div class="d-grid gap-2 mt-3">
-            <button type="button" class="btn btn-secondary align-center" onclick="location.href='payment.html';"><h5>Confirm</h3></button>
+            <button type="button" class="btn btn-secondary align-center" onclick="location.href='home.html';"><h5>Confirm</h3></button>
         </div>
     </div>
     <!-- FOOTER -->
     <footer id="footer">
+      
       <div class="large-6 medium-6 columns">
         <div class="container">
           <p><strong>Group 3</strong></p>
-          <a href="#carouselExampleDark" class="btn btn-primary"style="background-color:#314e52;" > top</a>
           <p><span>Copyright © 2021 Group3.co.</span> <span>All Rights Reserved.</span></p>
         </div>
       </div>
     </footer>
+  <!-- FOOTER ENDED -->  
 
 
       <!-- javascript -->
@@ -213,10 +218,10 @@
       var p2 = document.getElementById("price2").innerText;
       var p3 = document.getElementById("price3").innerText;
       var total = parseFloat(p1) + parseFloat(p2) + parseFloat(p3);
-      document.getElementById("total").innerText = total;
+      document.getElementById("total").innerText = total + " ฿";
       var vat = total * 3;
       document.getElementById("vat").innerText = "300% (" + vat +")";
-      document.getElementById("totalvat").innerText = total + vat;
+      document.getElementById("totalvat").innerText = total + vat +" ฿";
     </script>
 </body>
 </html>
